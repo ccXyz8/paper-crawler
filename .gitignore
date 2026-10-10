@@ -1,0 +1,51 @@
+# 本地配置与凭据；示例配置保留在仓库中
+/config.json
+/config.local*.json
+*.env
+.env
+.env.*
+!.env.example
+
+# 下载、任务目录与运行状态
+/downloads/
+/runs/
+/verification/
+/state.json
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
+/run_report.json
+/real_run*.json
+*.log
+*.part
+
+# Python 缓存、虚拟环境与测试产物
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# 构建与安装产物
+/build/
+/dist/
+*.egg-info/
+*.egg
+
+# 编辑器与系统文件
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 当前工作区的个人说明与历史任务记录
+/AGENTS.md
+/20261009-log.md

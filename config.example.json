@@ -1,0 +1,225 @@
+{
+  "keywords": [
+    "deepfake",
+    "fake image",
+    "forgery detection",
+    "image manipulation detection",
+    "tampering localization",
+    "audio deepfake",
+    "video forgery",
+    "media forensics"
+  ],
+  "keyword_mode": "any",
+  "download_dir": "downloads",
+  "state_file": "state.json",
+  "user_agent": "tfd-paper-crawler/0.1 (contact: your-email@example.com)",
+  "zotero": {
+    "enabled": true,
+    "base_url": "http://127.0.0.1:23119",
+    "api_key": "${ZOTERO_LOCAL_API_KEY}",
+    "user_or_group": "users/0",
+    "root_collection": "TFD",
+    "create_subcollections": true,
+    "fallback_to_root": true
+  },
+  "conferences": [
+    {
+      "name": "ICLR",
+      "website": "https://openreview.net",
+      "adapter": "openreview",
+      "years": [
+        2026,
+        2025
+      ],
+      "rate_limit": {
+        "requests_per_minute": 20,
+        "min_delay_seconds": 1.5,
+        "max_retries": 3,
+        "backoff_seconds": 3,
+        "timeout_seconds": 60
+      },
+      "options": {
+        "venue_id_template": "ICLR.cc/{year}/Conference",
+        "accepted_only": true
+      },
+      "meeting_dates": {
+        "2026": {
+          "end_date": "2026-04-27",
+          "source_url": "https://iclr.cc/Conferences/2026"
+        }
+      }
+    },
+    {
+      "name": "CVPR",
+      "website": "https://openaccess.thecvf.com",
+      "adapter": "cvf",
+      "years": [
+        2026,
+        2025,
+        2024
+      ],
+      "rate_limit": {
+        "requests_per_minute": 20,
+        "min_delay_seconds": 1.5
+      },
+      "meeting_dates": {
+        "2026": {
+          "end_date": "2026-06-07",
+          "source_url": "https://cvpr.thecvf.com/Conferences/2026/Dates"
+        }
+      }
+    },
+    {
+      "name": "AAAI",
+      "website": "https://ojs.aaai.org",
+      "adapter": "aaai",
+      "years": [
+        2026,
+        2025
+      ],
+      "rate_limit": {
+        "requests_per_minute": 12,
+        "min_delay_seconds": 3
+      },
+      "meeting_dates": {
+        "2026": {
+          "end_date": "2026-01-27",
+          "source_url": "https://aaai.org/conference/aaai/aaai-26/"
+        }
+      }
+    },
+    {
+      "name": "ACL",
+      "website": "https://aclanthology.org",
+      "adapter": "acl_anthology",
+      "years": [
+        2026,
+        2025,
+        2024
+      ],
+      "rate_limit": {
+        "requests_per_minute": 20,
+        "min_delay_seconds": 1.5
+      },
+      "meeting_dates": {
+        "2026": {
+          "end_date": "2026-07-07",
+          "source_url": "https://2026.aclweb.org/"
+        }
+      }
+    },
+    {
+      "name": "ICCV",
+      "website": "https://openaccess.thecvf.com",
+      "adapter": "cvf",
+      "years": [
+        2025,
+        2023
+      ],
+      "rate_limit": {
+        "requests_per_minute": 20,
+        "min_delay_seconds": 1.5
+      },
+      "meeting_dates": {
+        "2025": {
+          "end_date": "2025-10-23",
+          "source_url": "https://iccv.thecvf.com/Conferences/2025/Dates"
+        }
+      }
+    },
+    {
+      "name": "ICML",
+      "website": "https://openreview.net",
+      "adapter": "openreview",
+      "years": [
+        2026
+      ],
+      "rate_limit": {
+        "requests_per_minute": 12,
+        "min_delay_seconds": 3
+      },
+      "options": {
+        "venue_id_template": "ICML.cc/{year}/Conference",
+        "accepted_only": true
+      },
+      "meeting_dates": {
+        "2026": {
+          "end_date": "2026-07-11",
+          "source_url": "https://icml.cc/Conferences/2026/CallForPapers"
+        }
+      }
+    },
+    {
+      "name": "ICML",
+      "website": "https://proceedings.mlr.press",
+      "adapter": "pmlr",
+      "years": [
+        2025,
+        2024
+      ],
+      "rate_limit": {
+        "requests_per_minute": 12,
+        "min_delay_seconds": 3
+      },
+      "options": {
+        "volumes": {
+          "2024": 235
+        }
+      },
+      "meeting_dates": {
+        "2026": {
+          "end_date": "2026-07-11",
+          "source_url": "https://icml.cc/Conferences/2026/CallForPapers"
+        }
+      }
+    },
+    {
+      "name": "NeurIPS",
+      "website": "https://openreview.net",
+      "adapter": "openreview",
+      "years": [
+        2026,
+        2025,
+        2024
+      ],
+      "rate_limit": {
+        "requests_per_minute": 20,
+        "min_delay_seconds": 1.5
+      },
+      "options": {
+        "venue_id_template": "NeurIPS.cc/{year}/Conference",
+        "accepted_only": true
+      },
+      "fallbacks": [
+        {
+          "adapter": "neurips",
+          "website": "https://papers.nips.cc",
+          "options": {
+            "allowed_tracks": [
+              "main"
+            ]
+          }
+        }
+      ],
+      "meeting_dates": {
+        "2026": {
+          "end_date": "2026-12-13",
+          "source_url": "https://neurips.cc/Conferences/2026/Dates"
+        }
+      }
+    }
+  ],
+  "download_only": false,
+  "exclude_keywords": [],
+  "keyword_word_boundary": true,
+  "cache_ttl_hours": 24,
+  "offline": false,
+  "report_file": "run_report.json",
+  "max_matches": null,
+  "max_papers": 300,
+  "max_seconds": 300,
+  "scheduling": "round_robin",
+  "source_batch_size": 5,
+  "newest_first": true,
+  "metadata_only": false
+}
